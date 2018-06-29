@@ -19,4 +19,8 @@ public class Bedroom extends Room{
     public int getRoomNumber() {
         return this.roomNumber;
     }
+
+    public double getDailyRate() {
+        return this.nightlyRate;
+    }
 }

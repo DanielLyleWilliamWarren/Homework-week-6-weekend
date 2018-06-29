@@ -19,7 +19,7 @@ public abstract class Room {
     }
 
     public void addGuest(Guest guest) {
-        if (guests.size() < BedroomType.getCapacity()) {
+        if (guests.size() < capacity) {
             this.guests.add(guest);
         }
     }
@@ -36,11 +36,6 @@ public abstract class Room {
     public int guestCount(){
         return guests.size();
     }
-
-//    public int addGuest(Guest guest){
-//        guests.add(guest);
-//        return guests.size();
-//    }
 
 
 }

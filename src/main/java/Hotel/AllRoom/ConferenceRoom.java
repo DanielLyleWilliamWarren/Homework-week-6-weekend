@@ -18,5 +18,10 @@ public class ConferenceRoom extends Room {
     public String getConferenceRoomName() {
         return this.name;
     }
+
+
+    public double getDayRate() {
+        return this.dailyRate;
+    }
 }
 

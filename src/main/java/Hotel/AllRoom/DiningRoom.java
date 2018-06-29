@@ -12,4 +12,8 @@ public class DiningRoom extends Room {
         super(guests, capacity);
         this.name = name;
     }
+
+    public String getDiningRoomName() {
+        return this.name = name;
+    }
 }

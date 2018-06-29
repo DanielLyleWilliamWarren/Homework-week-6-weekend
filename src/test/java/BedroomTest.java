@@ -24,7 +24,6 @@ public class BedroomTest {
         guests = new ArrayList<>();
         guests.add(guest1);
         guests.add(guest2);
-        guests.add(guest3);
         bedroom = new Bedroom(12, guests, BedroomType.DOUBLE);
     }
 
@@ -46,7 +45,7 @@ public class BedroomTest {
     @Test
     public void checkGuestIn(){
         bedroom.addGuest(guest3);
-        assertEquals(3, bedroom.guestCount());
+        assertEquals(2, bedroom.guestCount());
     }
 
     @Test
@@ -57,6 +56,11 @@ public class BedroomTest {
     @Test
     public void hasRoomNumber(){
         assertEquals(12, bedroom.getRoomNumber());
+    }
+
+    @Test
+    public void hasNightRate(){
+     assertEquals(20, bedroom.getDailyRate(),1);
     }
 
 }
