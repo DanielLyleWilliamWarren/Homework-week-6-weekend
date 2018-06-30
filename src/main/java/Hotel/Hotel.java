@@ -38,6 +38,14 @@ public class Hotel {
     public void addABedroom(Bedroom singleBedroom) {
         bedrooms.add(singleBedroom);
     }
+
+    public int diningRoomCount() {
+        return diningRooms.size();
+    }
+
+    public int conferenceRoomCount(){
+        return conferenceRooms.size();
+    }
 }
 
 

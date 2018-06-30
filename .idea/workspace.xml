@@ -671,7 +671,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.HotelTest.canAddBedroom">
+  <component name="RunManager" selected="JUnit.HotelTest">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -807,10 +807,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HotelTest" />
         <item itemvalue="JUnit.HotelTest.canAddBedroom" />
         <item itemvalue="JUnit.HotelTest.addBedroom" />
         <item itemvalue="JUnit.HotelTest.howManyBedrooms" />
-        <item itemvalue="JUnit.HotelTest" />
         <item itemvalue="JUnit.HotelTest.hasBedrooms" />
       </list>
     </recent_temporary>
