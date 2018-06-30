@@ -30,6 +30,14 @@ public class Hotel {
     public ArrayList<ConferenceRoom> getConferenceRoom() {
         return this.conferenceRooms;
     }
+
+    public int bedroomCount() {
+        return bedrooms.size();
+    }
+
+    public void addABedroom(Bedroom singleBedroom) {
+        bedrooms.add(singleBedroom);
+    }
 }
 
 
