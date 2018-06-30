@@ -11,7 +11,7 @@ public class Bedroom extends Room{
 
     public Bedroom(int roomNumber, ArrayList<Guest> guests, BedroomType bedroomType) {
         super(guests, bedroomType.getCapacity());
-        this.roomNumber = roomNumber;
+       this.roomNumber = roomNumber;
         this.nightlyRate = bedroomType.getNightlyRate();
     }
 

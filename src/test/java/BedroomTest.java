@@ -17,7 +17,7 @@ public class BedroomTest {
     Bedroom bedroom;
 
     @Before
-    public void setup(){
+    public void setup() {
         guest1 = new Guest("Bob");
         guest2 = new Guest("Fred");
         guest3 = new Guest("James");
@@ -28,39 +28,39 @@ public class BedroomTest {
     }
 
     @Test
-    public void hasCapacity(){
+    public void hasCapacity() {
         assertEquals(2, bedroom.getCapacity());
     }
 
     @Test
-    public void doesBedroomHaveGuest(){
+    public void doesBedroomHaveGuest() {
         assertEquals(guests, bedroom.getGuests());
     }
 
     @Test
-    public void howManyGuests(){
+    public void howManyGuests() {
         assertEquals(2, bedroom.guestCount());
     }
 
     @Test
-    public void checkGuestIn(){
+    public void checkGuestIn() {
         bedroom.addGuest(guest3);
         assertEquals(2, bedroom.guestCount());
     }
 
     @Test
-    public void canCheckGuestsOut(){
+    public void canCheckGuestsOut() {
         assertEquals(0, bedroom.checkedGuestsOut());
     }
 
     @Test
-    public void hasRoomNumber(){
+    public void hasRoomNumber() {
         assertEquals(12, bedroom.getRoomNumber());
     }
 
     @Test
-    public void hasNightRate(){
-     assertEquals(20, bedroom.getDailyRate(),1);
+    public void hasNightRate() {
+        assertEquals(20, bedroom.getDailyRate(), 1);
     }
 
 }

@@ -17,3 +17,4 @@ public class DiningRoom extends Room {
         return this.name = name;
     }
 }
+
