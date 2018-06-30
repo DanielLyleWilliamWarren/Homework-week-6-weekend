@@ -46,6 +46,14 @@ public class Hotel {
     public int conferenceRoomCount(){
         return conferenceRooms.size();
     }
+
+    public void addConferenceRoom(ConferenceRoom conferenceRoom) {
+        conferenceRooms.add(conferenceRoom);
+    }
+
+    public void addDiningRoom(DiningRoom diningRoom) {
+        diningRooms.add(diningRoom);
+    }
 }
 
 

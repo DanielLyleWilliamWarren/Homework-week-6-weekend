@@ -80,4 +80,16 @@ public class HotelTest {
     public void howManyConferenceRooms() {
         assertEquals(0, hotel.conferenceRoomCount());
     }
+
+    @Test
+    public void canAddConferenceRooms(){
+        hotel.addConferenceRoom(conferenceRoom);
+        assertEquals(1, hotel.conferenceRoomCount());
+    }
+
+    @Test
+    public void canAddDiningRooms(){
+        hotel.addDiningRoom(diningRoom);
+        assertEquals(1, hotel.diningRoomCount());
+    }
 }
