@@ -7,7 +7,10 @@ import Hotel.Guest;
 import org.junit.Before;
 import org.junit.Test;
 
+
 import java.util.ArrayList;
+
+import static org.junit.Assert.assertEquals;
 
 public class HotelTest {
 
@@ -25,7 +28,7 @@ public class HotelTest {
     ConferenceRoom conferenceRoom;
 
     @Before
-    public void setup(){
+    public void setup() {
         guest1 = new Guest("Daniel");
         guest2 = new Guest("Gabby");
         guest3 = new Guest("David");
@@ -37,11 +40,24 @@ public class HotelTest {
         conferenceRooms = new ArrayList<>();
         doubleBedroom = new Bedroom(12, twinRoomBooking, BedroomType.DOUBLE);
         singleBedroom = new Bedroom(13, null, BedroomType.SINGLE);
-        diningRoom =  new DiningRoom(30, "Belle Mare", twinRoomBooking);
+        diningRoom = new DiningRoom(30, "Belle Mare", twinRoomBooking);
         conferenceRoom = new ConferenceRoom(50, twinRoomBooking, "Glass Suite", 100.00);
         hotel = new Hotel(bedrooms, diningRooms, conferenceRooms);
     }
 
     @Test
-    public
+    public void hasBedrooms() {
+        assertEquals(bedrooms, hotel.getBedrooms());
+    }
+
+    @Test
+    public void hasDiningRoom() {
+        assertEquals(diningRooms, hotel.getDiningRoom());
+    }
+
+    @Test
+    public void hasConferenceRoom() {
+        assertEquals(conferenceRooms, hotel.getConferenceRoom());
+    }
+
 }
