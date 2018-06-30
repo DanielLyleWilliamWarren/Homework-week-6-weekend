@@ -1,6 +1,6 @@
 package Hotel.AllRoom;
 
-public enum BedroomType {
+public enum  BedroomType {
     SINGLE(1, 10.00),
     DOUBLE(2, 20.00);
 

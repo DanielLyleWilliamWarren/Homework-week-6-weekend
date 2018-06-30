@@ -33,7 +33,7 @@ public class DiningRoomTest {
     }
 
     @Test
-    public void doesBedroomHaveGuest(){
+    public void doesDiningRoomHaveGuest(){
         assertEquals(guests, diningRoom.getGuests());
     }
 

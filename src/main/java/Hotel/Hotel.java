@@ -54,6 +54,15 @@ public class Hotel {
     public void addDiningRoom(DiningRoom diningRoom) {
         diningRooms.add(diningRoom);
     }
+
+    public Bedroom findBedroomByNumber(int roomNumber) {
+        Bedroom foundRoom= null;
+        for (Bedroom bedroom : bedrooms) {
+            if (bedroom.getRoomNumber() == roomNumber)
+                foundRoom = bedroom;
+        }
+        return foundRoom;
+    }
 }
 
 

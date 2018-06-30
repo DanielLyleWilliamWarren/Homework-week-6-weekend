@@ -92,4 +92,10 @@ public class HotelTest {
         hotel.addDiningRoom(diningRoom);
         assertEquals(1, hotel.diningRoomCount());
     }
+
+    @Test
+    public void canFindBedroomByNumber(){
+        hotel.addABedroom(singleBedroom);
+        assertEquals(singleBedroom, hotel.findBedroomByNumber(13));
+    }
 }
