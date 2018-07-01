@@ -65,6 +65,22 @@ public class Hotel {
     }
 
 
+    public Bedroom getBedroomToAddGuestTo(BedroomType bedroomType) {
+        Bedroom avaliableRoom = null;
+        for (Bedroom bedroom : bedrooms) {
+            if(bedroom.getBedroomType() == bedroomType && !bedroom.isBedroomBooked())
+                avaliableRoom = bedroom;
+        }
+        return avaliableRoom;
+    }
 }
 
 
+//    public Bedroom getBedroomByTypeForBooking(RoomTypes roomType) {
+//        Bedroom availableRoom = null;
+//        for (Bedroom bedroom : bedrooms) {
+//            if (bedroom.getRoomType() == roomType && !bedroom.isBooked())
+//                availableRoom = bedroom;
+//        }
+//        return availableRoom;
+//    }

@@ -37,9 +37,23 @@ public abstract class Room {
         return guests.size();
     }
 
-
     public boolean hasAvaliableCapacity() {
         if(this.capacity > guestCount());
         return true;
     }
+
+    public boolean isBedroomBooked() {
+        boolean answer = false;
+        if (guests.size() > 0){
+            answer = true;
+        }
+        return answer;
+    }
+//
+//    public boolean isBooked() {
+//        boolean answer = false;
+//        if (guests.size() > 0){answer = true;}
+//        return answer;
+//    }
+
 }

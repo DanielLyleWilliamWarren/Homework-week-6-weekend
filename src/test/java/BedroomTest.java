@@ -11,10 +11,12 @@ import static org.junit.Assert.assertEquals;
 public class BedroomTest {
 
     ArrayList<Guest> guests;
+    ArrayList<Guest> guest;
     Guest guest1;
     Guest guest2;
     Guest guest3;
     Bedroom bedroom;
+    Bedroom bedroom2;
 
     @Before
     public void setup() {
@@ -22,9 +24,11 @@ public class BedroomTest {
         guest2 = new Guest("Fred");
         guest3 = new Guest("James");
         guests = new ArrayList<>();
+        guest = new ArrayList<>();
         guests.add(guest1);
         guests.add(guest2);
         bedroom = new Bedroom(12, guests, BedroomType.DOUBLE);
+        bedroom2 = new Bedroom(14, guest, BedroomType.SINGLE);
     }
 
     @Test
@@ -73,5 +77,15 @@ public class BedroomTest {
         assertEquals(BedroomType.DOUBLE, bedroom.getBedroomType());
     }
 
+    @Test
+    public void isBedroomBooked__True(){
+        assertEquals(true, bedroom.isBedroomBooked());
+    }
+
+    @Test
+    public void isBedroomBooked__False(){
+        bedroom.checkedGuestsOut();
+        assertEquals(false, bedroom.isBedroomBooked());
+    }
 }
 
