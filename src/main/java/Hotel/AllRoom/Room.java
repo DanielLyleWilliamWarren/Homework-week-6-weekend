@@ -51,4 +51,10 @@ public abstract class Room {
     }
 
 
+    public String geustsNamesInRoom(){
+    ArrayList<String> nameArray = new ArrayList<String>();
+    for (Guest guest : guests) nameArray.add(guest.getName());
+    return nameArray.toString();
+    }
 }
+

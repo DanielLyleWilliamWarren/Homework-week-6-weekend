@@ -116,4 +116,13 @@ public class HotelTest {
         assertEquals(0, singleBedroom.guestCount());
     }
 
+    @Test
+    public void canCheckGuestsInRoom(){
+        hotel.addABedroom(singleBedroom);
+        hotel.getBedroomToAddGuestTo(BedroomType.SINGLE);
+        hotel.addGuest(guest1, BedroomType.SINGLE);
+        assertEquals("[Daniel]", singleBedroom.geustsNamesInRoom());
+    }
+
+
 }
