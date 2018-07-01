@@ -6,11 +6,11 @@ import java.util.ArrayList;
 
 public abstract class Room {
 
-    private ArrayList<Guest> guests;
-    private int capacity;
+    protected ArrayList<Guest> guests;
+    protected int capacity;
 
     public Room(ArrayList<Guest> guests, int capacity) {
-        this.guests = guests;
+        this.guests = new ArrayList<>();
         this.capacity = capacity;
     }
 
@@ -34,7 +34,7 @@ public abstract class Room {
     }
 
     public int guestCount(){
-        return guests.size();
+        return this.guests.size();
     }
 
     public boolean hasAvaliableCapacity() {
@@ -44,16 +44,11 @@ public abstract class Room {
 
     public boolean isBedroomBooked() {
         boolean answer = false;
-        if (guests.size() > 0){
+        if (guestCount() > 0){
             answer = true;
         }
         return answer;
     }
-//
-//    public boolean isBooked() {
-//        boolean answer = false;
-//        if (guests.size() > 0){answer = true;}
-//        return answer;
-//    }
+
 
 }

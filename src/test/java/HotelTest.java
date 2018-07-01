@@ -2,6 +2,7 @@ import Hotel.AllRoom.Bedroom;
 import Hotel.AllRoom.BedroomType;
 import Hotel.AllRoom.ConferenceRoom;
 import Hotel.AllRoom.DiningRoom;
+import Hotel.AllRoom.Room;
 import Hotel.Hotel;
 import Hotel.Guest;
 import org.junit.Before;
@@ -100,21 +101,19 @@ public class HotelTest {
     }
 
     @Test
-    public void canGetBedroomByTypeForBooking(){
+    public void canCheckPeopleInToRooms() {
         hotel.addABedroom(singleBedroom);
-        assertEquals(singleBedroom, hotel.getBedroomToAddGuestTo(BedroomType.SINGLE));
+        hotel.getBedroomToAddGuestTo(BedroomType.SINGLE);
+        hotel.addGuest(guest3, BedroomType.SINGLE);
+        assertEquals(1, singleBedroom.guestCount());
     }
 
-//    @Test
-//    public void checkInGuest(){
-//        hotel.checkIntoRoom(guest3, 13);
-//        assertEquals(1, singleBedroom.getGuests().size());
-//    }
+    @Test
+    public void checkGuestsOut(){
+        hotel.addABedroom((singleBedroom));
+        hotel.getBedroomToAddGuestTo(BedroomType.SINGLE);
+        hotel.checkGuestsOut(BedroomType.SINGLE);
+        assertEquals(0, singleBedroom.guestCount());
+    }
 
-//    @Test
-//    public void canCheckGuestIn(){
-//        hotel.addABedroom(singleBedroom);
-//        hotel.addGuestToRoom(guest3);
-//        assertEquals(1, singleBedroom.guestCount());
-//    }
 }

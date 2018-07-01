@@ -1,16 +1,16 @@
 package Hotel;
 
-import Hotel.AllRoom.*;
 import Hotel.AllRoom.Room;
+import Hotel.AllRoom.*;
 import java.util.ArrayList;
 
-import static Hotel.AllRoom.BedroomType.SINGLE;
 
 public class Hotel {
 
-    private ArrayList<Bedroom> bedrooms;
-    private ArrayList<DiningRoom> diningRooms;
-    private ArrayList<ConferenceRoom> conferenceRooms;
+    protected ArrayList<Bedroom> bedrooms;
+    protected ArrayList<DiningRoom> diningRooms;
+    protected ArrayList<ConferenceRoom> conferenceRooms;
+    protected Room bedroom;
 
     public Hotel(ArrayList<Bedroom> bedrooms, ArrayList<DiningRoom> diningRooms, ArrayList<ConferenceRoom> conferenceRooms) {
         this.bedrooms = bedrooms;
@@ -73,14 +73,16 @@ public class Hotel {
         }
         return avaliableRoom;
     }
+
+    public void addGuest(Guest guest3, BedroomType single) {
+        bedroom = getBedroomToAddGuestTo(single);
+        bedroom.addGuest(guest3);
+    }
+
+
+    public void checkGuestsOut(BedroomType single) {
+        bedroom = getBedroomToAddGuestTo(single);
+        bedroom.checkedGuestsOut();
+    }
+
 }
-
-
-//    public Bedroom getBedroomByTypeForBooking(RoomTypes roomType) {
-//        Bedroom availableRoom = null;
-//        for (Bedroom bedroom : bedrooms) {
-//            if (bedroom.getRoomType() == roomType && !bedroom.isBooked())
-//                availableRoom = bedroom;
-//        }
-//        return availableRoom;
-//    }
