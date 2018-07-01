@@ -38,4 +38,8 @@ public abstract class Room {
     }
 
 
+    public boolean hasAvaliableCapacity() {
+        if(this.capacity > guestCount());
+        return true;
+    }
 }

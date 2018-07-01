@@ -1,10 +1,10 @@
 package Hotel;
 
-import Hotel.AllRoom.Bedroom;
-import Hotel.AllRoom.ConferenceRoom;
-import Hotel.AllRoom.DiningRoom;
-
+import Hotel.AllRoom.*;
+import Hotel.AllRoom.Room;
 import java.util.ArrayList;
+
+import static Hotel.AllRoom.BedroomType.SINGLE;
 
 public class Hotel {
 
@@ -12,10 +12,10 @@ public class Hotel {
     private ArrayList<DiningRoom> diningRooms;
     private ArrayList<ConferenceRoom> conferenceRooms;
 
-    public Hotel(ArrayList<Bedroom> bedrooms, ArrayList<DiningRoom> diningRooms, ArrayList<ConferenceRoom> conferenceRooms){
-    this.bedrooms = bedrooms;
-    this.diningRooms = diningRooms;
-    this.conferenceRooms = conferenceRooms;
+    public Hotel(ArrayList<Bedroom> bedrooms, ArrayList<DiningRoom> diningRooms, ArrayList<ConferenceRoom> conferenceRooms) {
+        this.bedrooms = bedrooms;
+        this.diningRooms = diningRooms;
+        this.conferenceRooms = conferenceRooms;
     }
 
 
@@ -43,7 +43,7 @@ public class Hotel {
         return diningRooms.size();
     }
 
-    public int conferenceRoomCount(){
+    public int conferenceRoomCount() {
         return conferenceRooms.size();
     }
 
@@ -56,15 +56,15 @@ public class Hotel {
     }
 
     public Bedroom findBedroomByNumber(int roomNumber) {
-        Bedroom foundRoom= null;
+        Bedroom foundRoom = null;
         for (Bedroom bedroom : bedrooms) {
             if (bedroom.getRoomNumber() == roomNumber)
                 foundRoom = bedroom;
         }
         return foundRoom;
     }
+
+
 }
-
-
 
 

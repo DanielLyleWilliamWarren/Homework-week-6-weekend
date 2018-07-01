@@ -98,4 +98,17 @@ public class HotelTest {
         hotel.addABedroom(singleBedroom);
         assertEquals(singleBedroom, hotel.findBedroomByNumber(13));
     }
+
+//    @Test
+//    public void checkInGuest(){
+//        hotel.checkIntoRoom(guest3, 13);
+//        assertEquals(1, singleBedroom.getGuests().size());
+//    }
+
+//    @Test
+//    public void canCheckGuestIn(){
+//        hotel.addABedroom(singleBedroom);
+//        hotel.addGuestToRoom(guest3);
+//        assertEquals(1, singleBedroom.guestCount());
+//    }
 }

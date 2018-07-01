@@ -63,4 +63,15 @@ public class BedroomTest {
         assertEquals(20, bedroom.getDailyRate(), 1);
     }
 
+    @Test
+    public void hasAvaliableCapacity(){
+        assertEquals(true, bedroom.hasAvaliableCapacity());
+    }
+
+    @Test
+    public void canGetBedroomType() {
+        assertEquals(BedroomType.DOUBLE, bedroom.getBedroomType());
+    }
+
 }
+

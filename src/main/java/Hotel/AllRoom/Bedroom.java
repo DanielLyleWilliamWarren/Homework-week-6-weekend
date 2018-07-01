@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 public class Bedroom extends Room{
 
+    private BedroomType bedroomType;
     private int roomNumber;
     private double nightlyRate;
 
@@ -13,6 +14,7 @@ public class Bedroom extends Room{
         super(guests, bedroomType.getCapacity());
        this.roomNumber = roomNumber;
         this.nightlyRate = bedroomType.getNightlyRate();
+        this.bedroomType = bedroomType;
     }
 
 
@@ -22,5 +24,8 @@ public class Bedroom extends Room{
 
     public double getDailyRate() {
         return this.nightlyRate;
+    }
+    public BedroomType getBedroomType(){
+        return bedroomType;
     }
 }
